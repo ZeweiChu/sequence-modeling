@@ -1,0 +1,813 @@
+2020-07-22 23:35:19,556 - INFO - allennlp.common.params - random_seed = 13370
+2020-07-22 23:35:19,557 - INFO - allennlp.common.params - numpy_seed = 1337
+2020-07-22 23:35:19,557 - INFO - allennlp.common.params - pytorch_seed = 133
+2020-07-22 23:35:19,802 - INFO - allennlp.common.checks - Pytorch version: 1.5.1
+2020-07-22 23:35:19,802 - INFO - allennlp.common.params - type = default
+2020-07-22 23:35:19,803 - INFO - allennlp.common.params - dataset_reader.type = conll2003
+2020-07-22 23:35:19,803 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2020-07-22 23:35:19,803 - INFO - allennlp.common.params - dataset_reader.cache_directory = None
+2020-07-22 23:35:19,803 - INFO - allennlp.common.params - dataset_reader.max_instances = None
+2020-07-22 23:35:19,803 - INFO - allennlp.common.params - dataset_reader.manual_distributed_sharding = False
+2020-07-22 23:35:19,803 - INFO - allennlp.common.params - dataset_reader.manual_multi_process_sharding = False
+2020-07-22 23:35:19,803 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.type = characters
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.namespace = token_characters
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.character_tokenizer = <allennlp.data.tokenizers.character_tokenizer.CharacterTokenizer object at 0x7f4feb7bb1d0>
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.start_tokens = None
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.end_tokens = None
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.min_padding_length = 0
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.token_min_padding_length = 0
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.type = single_id
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.namespace = tokens
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.lowercase_tokens = True
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.start_tokens = None
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.end_tokens = None
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.feature_name = text
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.default_value = THIS IS A REALLY UNLIKELY VALUE THAT HAS TO BE A STRING
+2020-07-22 23:35:19,804 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.token_min_padding_length = 0
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - dataset_reader.tag_label = ner
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - dataset_reader.feature_labels = ()
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - dataset_reader.coding_scheme = IOB1
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - dataset_reader.label_namespace = labels
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - train_data_path = ./data/twitter_train.ner
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - vocabulary = None
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - datasets_for_vocab_creation = None
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - validation_dataset_reader = None
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - validation_data_path = ./data/twitter_dev.ner
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - validation_data_loader = None
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - test_data_path = ./data/twitter_dev.ner
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - evaluate_on_test = True
+2020-07-22 23:35:19,805 - INFO - allennlp.common.params - batch_weight_key = 
+2020-07-22 23:35:19,805 - INFO - allennlp.training.util - Reading training data from ./data/twitter_train.ner
+2020-07-22 23:35:19,806 - INFO - allennlp.data.dataset_readers.conll2003 - Reading instances from lines in file at: ./data/twitter_train.ner
+2020-07-22 23:35:19,919 - INFO - allennlp.training.util - Reading validation data from ./data/twitter_dev.ner
+2020-07-22 23:35:19,919 - INFO - allennlp.data.dataset_readers.conll2003 - Reading instances from lines in file at: ./data/twitter_dev.ner
+2020-07-22 23:35:19,939 - INFO - allennlp.training.util - Reading test data from ./data/twitter_dev.ner
+2020-07-22 23:35:19,939 - INFO - allennlp.data.dataset_readers.conll2003 - Reading instances from lines in file at: ./data/twitter_dev.ner
+2020-07-22 23:35:19,959 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+2020-07-22 23:35:20,150 - INFO - allennlp.common.params - model.type = simple_tagger
+2020-07-22 23:35:20,150 - INFO - allennlp.common.params - model.regularizer = None
+2020-07-22 23:35:20,150 - INFO - allennlp.common.params - model.text_field_embedder.type = basic
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.type = character_encoding
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.embedding_dim = 5
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.num_embeddings = None
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.projection_dim = None
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.weight = None
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.padding_index = None
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.trainable = True
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.max_norm = None
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.norm_type = 2.0
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.scale_grad_by_freq = False
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.sparse = False
+2020-07-22 23:35:20,151 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.vocab_namespace = tokens
+2020-07-22 23:35:20,152 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.pretrained_file = None
+2020-07-22 23:35:20,152 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.type = cnn
+2020-07-22 23:35:20,152 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.embedding_dim = 5
+2020-07-22 23:35:20,152 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.num_filters = 50
+2020-07-22 23:35:20,152 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.ngram_filter_sizes = [5]
+2020-07-22 23:35:20,152 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.conv_layer_activation = None
+2020-07-22 23:35:20,152 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.output_dim = None
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.dropout = 0.2
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.type = embedding
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.embedding_dim = 50
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.num_embeddings = None
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.projection_dim = None
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.weight = None
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.padding_index = None
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.trainable = True
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.max_norm = None
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.norm_type = 2.0
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.scale_grad_by_freq = False
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.sparse = False
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.vocab_namespace = tokens
+2020-07-22 23:35:20,153 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.pretrained_file = None
+2020-07-22 23:35:20,155 - INFO - allennlp.common.params - model.encoder.type = pass_through
+2020-07-22 23:35:20,155 - INFO - allennlp.common.params - model.encoder.input_dim = 100
+2020-07-22 23:35:20,155 - INFO - allennlp.common.params - model.calculate_span_f1 = None
+2020-07-22 23:35:20,156 - INFO - allennlp.common.params - model.label_encoding = None
+2020-07-22 23:35:20,156 - INFO - allennlp.common.params - model.label_namespace = labels
+2020-07-22 23:35:20,156 - INFO - allennlp.common.params - model.verbose_metrics = False
+2020-07-22 23:35:20,156 - INFO - allennlp.common.params - model.initializer = <allennlp.nn.initializers.InitializerApplicator object at 0x7f4feb6e6518>
+2020-07-22 23:35:20,156 - INFO - allennlp.nn.initializers - Initializing parameters
+2020-07-22 23:35:20,156 - INFO - allennlp.nn.initializers - Done initializing parameters; the following parameters are using their default initialization from their code
+2020-07-22 23:35:20,156 - INFO - allennlp.nn.initializers -    tag_projection_layer._module.bias
+2020-07-22 23:35:20,156 - INFO - allennlp.nn.initializers -    tag_projection_layer._module.weight
+2020-07-22 23:35:20,156 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._embedding._module.weight
+2020-07-22 23:35:20,156 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.bias
+2020-07-22 23:35:20,156 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.weight
+2020-07-22 23:35:20,156 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_tokens.weight
+2020-07-22 23:35:20,156 - INFO - filelock - Lock 139980957619536 acquired on ./model/simple_tagger_ner/vocabulary/.lock
+2020-07-22 23:35:20,167 - INFO - filelock - Lock 139980957619536 released on ./model/simple_tagger_ner/vocabulary/.lock
+2020-07-22 23:35:20,167 - INFO - allennlp.common.params - data_loader.type = default
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.batch_size = 1
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.shuffle = False
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.sampler = None
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.pin_memory = False
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.drop_last = False
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.timeout = 0
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.worker_init_fn = None
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.multiprocessing_context = None
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.batch_sampler.type = bucket
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.batch_sampler.batch_size = 80
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.batch_sampler.sorting_keys = ['tokens']
+2020-07-22 23:35:20,168 - INFO - allennlp.common.params - data_loader.batch_sampler.padding_noise = 0
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.batch_sampler.drop_last = False
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.type = default
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.batch_size = 1
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.shuffle = False
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.sampler = None
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.pin_memory = False
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.drop_last = False
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.timeout = 0
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.worker_init_fn = None
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.multiprocessing_context = None
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2020-07-22 23:35:20,169 - INFO - allennlp.common.params - data_loader.batch_sampler.type = bucket
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.batch_sampler.batch_size = 80
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.batch_sampler.sorting_keys = ['tokens']
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.batch_sampler.padding_noise = 0
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.batch_sampler.drop_last = False
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.type = default
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.batch_size = 1
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.shuffle = False
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.sampler = None
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.pin_memory = False
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.drop_last = False
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.timeout = 0
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.worker_init_fn = None
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.multiprocessing_context = None
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.batch_sampler.type = bucket
+2020-07-22 23:35:20,170 - INFO - allennlp.common.params - data_loader.batch_sampler.batch_size = 80
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - data_loader.batch_sampler.sorting_keys = ['tokens']
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - data_loader.batch_sampler.padding_noise = 0
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - data_loader.batch_sampler.drop_last = False
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.type = gradient_descent
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.patience = 10
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.validation_metric = -loss
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.num_epochs = 40
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.cuda_device = -1
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.grad_norm = None
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.grad_clipping = None
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.distributed = None
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.world_size = 1
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.num_gradient_accumulation_steps = 1
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.opt_level = None
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.no_grad = None
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.optimizer = adam
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.learning_rate_scheduler = None
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.momentum_scheduler = None
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.tensorboard_writer = None
+2020-07-22 23:35:20,171 - INFO - allennlp.common.params - trainer.moving_average = None
+2020-07-22 23:35:20,172 - INFO - allennlp.common.params - trainer.checkpointer = None
+2020-07-22 23:35:20,172 - INFO - allennlp.common.params - trainer.batch_callbacks = None
+2020-07-22 23:35:20,172 - INFO - allennlp.common.params - trainer.epoch_callbacks = None
+2020-07-22 23:35:20,172 - INFO - allennlp.common.util - The following parameters are Frozen (without gradient):
+2020-07-22 23:35:20,172 - INFO - allennlp.common.util - The following parameters are Tunable (with gradient):
+2020-07-22 23:35:20,172 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._embedding._module.weight
+2020-07-22 23:35:20,172 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.weight
+2020-07-22 23:35:20,172 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._encoder._module.conv_layer_0.bias
+2020-07-22 23:35:20,172 - INFO - allennlp.common.util - text_field_embedder.token_embedder_tokens.weight
+2020-07-22 23:35:20,172 - INFO - allennlp.common.util - tag_projection_layer._module.weight
+2020-07-22 23:35:20,172 - INFO - allennlp.common.util - tag_projection_layer._module.bias
+2020-07-22 23:35:20,172 - INFO - allennlp.common.params - type = adam
+2020-07-22 23:35:20,172 - INFO - allennlp.common.params - parameter_groups = None
+2020-07-22 23:35:20,172 - INFO - allennlp.common.params - lr = 0.001
+2020-07-22 23:35:20,172 - INFO - allennlp.common.params - betas = (0.9, 0.999)
+2020-07-22 23:35:20,172 - INFO - allennlp.common.params - eps = 1e-08
+2020-07-22 23:35:20,172 - INFO - allennlp.common.params - weight_decay = 0.0
+2020-07-22 23:35:20,172 - INFO - allennlp.common.params - amsgrad = False
+2020-07-22 23:35:20,172 - INFO - allennlp.training.optimizers - Number of trainable parameters: 502271
+2020-07-22 23:35:20,173 - INFO - allennlp.training.trainer - Beginning training.
+2020-07-22 23:35:20,173 - INFO - allennlp.training.trainer - Epoch 0/39
+2020-07-22 23:35:20,173 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 494.34
+2020-07-22 23:35:20,186 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:20,186 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:22,771 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:23,007 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:23,007 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.518  |     0.946
+2020-07-22 23:35:23,007 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.651  |     0.955
+2020-07-22 23:35:23,008 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:23,008 - INFO - allennlp.training.tensorboard_writer - loss               |     2.931  |     2.779
+2020-07-22 23:35:23,008 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:23,008 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   494.340  |       N/A
+2020-07-22 23:35:23,011 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:23,012 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.839290
+2020-07-22 23:35:23,013 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:50
+2020-07-22 23:35:23,013 - INFO - allennlp.training.trainer - Epoch 1/39
+2020-07-22 23:35:23,013 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 639.728
+2020-07-22 23:35:23,027 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:23,028 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:25,329 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:25,435 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:25,435 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:35:25,435 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.957  |     0.954
+2020-07-22 23:35:25,436 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:25,436 - INFO - allennlp.training.tensorboard_writer - loss               |     2.578  |     2.329
+2020-07-22 23:35:25,436 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:25,436 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   639.728  |       N/A
+2020-07-22 23:35:25,439 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:25,441 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.428134
+2020-07-22 23:35:25,441 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:40
+2020-07-22 23:35:25,441 - INFO - allennlp.training.trainer - Epoch 2/39
+2020-07-22 23:35:25,441 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 652.096
+2020-07-22 23:35:25,456 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:25,457 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:27,790 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:27,897 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:27,898 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:35:27,898 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.958  |     0.955
+2020-07-22 23:35:27,898 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:27,898 - INFO - allennlp.training.tensorboard_writer - loss               |     1.989  |     1.609
+2020-07-22 23:35:27,899 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:27,899 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   652.096  |       N/A
+2020-07-22 23:35:27,902 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:27,904 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.463095
+2020-07-22 23:35:27,904 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:35
+2020-07-22 23:35:27,904 - INFO - allennlp.training.trainer - Epoch 3/39
+2020-07-22 23:35:27,904 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:27,919 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:27,919 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:30,221 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:30,327 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:30,328 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:35:30,328 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.958  |     0.953
+2020-07-22 23:35:30,328 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:30,329 - INFO - allennlp.training.tensorboard_writer - loss               |     1.176  |     0.798
+2020-07-22 23:35:30,329 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:30,329 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:30,332 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:30,334 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.429995
+2020-07-22 23:35:30,334 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:31
+2020-07-22 23:35:30,334 - INFO - allennlp.training.trainer - Epoch 4/39
+2020-07-22 23:35:30,334 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:30,350 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:30,351 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:32,680 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:32,786 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:32,786 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:35:32,787 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.959  |     0.955
+2020-07-22 23:35:32,787 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:32,787 - INFO - allennlp.training.tensorboard_writer - loss               |     0.548  |     0.430
+2020-07-22 23:35:32,787 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:32,787 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:32,790 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:32,792 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.458119
+2020-07-22 23:35:32,792 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:28
+2020-07-22 23:35:32,792 - INFO - allennlp.training.trainer - Epoch 5/39
+2020-07-22 23:35:32,792 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:32,807 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:32,807 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:35,111 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:35,217 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:35,217 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:35:35,218 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.962  |     0.961
+2020-07-22 23:35:35,218 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:35,218 - INFO - allennlp.training.tensorboard_writer - loss               |     0.361  |     0.364
+2020-07-22 23:35:35,218 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:35,219 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:35,222 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:35,224 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.431156
+2020-07-22 23:35:35,224 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:25
+2020-07-22 23:35:35,224 - INFO - allennlp.training.trainer - Epoch 6/39
+2020-07-22 23:35:35,224 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:35,238 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:35,238 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:37,562 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:37,668 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:37,668 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:35:37,669 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.965  |     0.965
+2020-07-22 23:35:37,669 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:37,669 - INFO - allennlp.training.tensorboard_writer - loss               |     0.319  |     0.342
+2020-07-22 23:35:37,669 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:37,670 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:37,673 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:37,675 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.450895
+2020-07-22 23:35:37,675 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:22
+2020-07-22 23:35:37,675 - INFO - allennlp.training.trainer - Epoch 7/39
+2020-07-22 23:35:37,675 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:37,689 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:37,689 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:40,017 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:40,125 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:40,125 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:35:40,126 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.967  |     0.965
+2020-07-22 23:35:40,126 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:40,126 - INFO - allennlp.training.tensorboard_writer - loss               |     0.296  |     0.328
+2020-07-22 23:35:40,126 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:40,126 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:40,129 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:40,131 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.456748
+2020-07-22 23:35:40,131 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:19
+2020-07-22 23:35:40,132 - INFO - allennlp.training.trainer - Epoch 8/39
+2020-07-22 23:35:40,132 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:40,145 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:40,146 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:42,475 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:42,583 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:42,583 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:35:42,584 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.968  |     0.965
+2020-07-22 23:35:42,584 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:42,584 - INFO - allennlp.training.tensorboard_writer - loss               |     0.278  |     0.317
+2020-07-22 23:35:42,584 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:42,585 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:42,588 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:42,590 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.458169
+2020-07-22 23:35:42,590 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:17
+2020-07-22 23:35:42,590 - INFO - allennlp.training.trainer - Epoch 9/39
+2020-07-22 23:35:42,590 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:42,604 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:42,604 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:44,948 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:45,055 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:45,056 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:35:45,056 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.967  |     0.964
+2020-07-22 23:35:45,056 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:45,056 - INFO - allennlp.training.tensorboard_writer - loss               |     0.265  |     0.309
+2020-07-22 23:35:45,057 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:45,057 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:45,060 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:45,062 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.471982
+2020-07-22 23:35:45,062 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:14
+2020-07-22 23:35:45,062 - INFO - allennlp.training.trainer - Epoch 10/39
+2020-07-22 23:35:45,062 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:45,077 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:45,078 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:47,442 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:47,550 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:47,550 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:35:47,551 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.967  |     0.964
+2020-07-22 23:35:47,551 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:47,551 - INFO - allennlp.training.tensorboard_writer - loss               |     0.253  |     0.303
+2020-07-22 23:35:47,551 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:47,551 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:47,554 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:47,556 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.494483
+2020-07-22 23:35:47,556 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:12
+2020-07-22 23:35:47,556 - INFO - allennlp.training.trainer - Epoch 11/39
+2020-07-22 23:35:47,557 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:47,571 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:47,571 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:49,940 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:50,048 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:50,048 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.948  |     0.947
+2020-07-22 23:35:50,049 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.967  |     0.964
+2020-07-22 23:35:50,049 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:50,049 - INFO - allennlp.training.tensorboard_writer - loss               |     0.245  |     0.299
+2020-07-22 23:35:50,049 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:50,050 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:50,053 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:50,055 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.498132
+2020-07-22 23:35:50,055 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:09
+2020-07-22 23:35:50,055 - INFO - allennlp.training.trainer - Epoch 12/39
+2020-07-22 23:35:50,055 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:50,069 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:50,069 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:52,393 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:52,500 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:52,501 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.948  |     0.947
+2020-07-22 23:35:52,501 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.967  |     0.964
+2020-07-22 23:35:52,501 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:52,501 - INFO - allennlp.training.tensorboard_writer - loss               |     0.236  |     0.295
+2020-07-22 23:35:52,501 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:52,502 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:52,505 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:52,507 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.451914
+2020-07-22 23:35:52,507 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:07
+2020-07-22 23:35:52,507 - INFO - allennlp.training.trainer - Epoch 13/39
+2020-07-22 23:35:52,507 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 655.4
+2020-07-22 23:35:52,521 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:52,522 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:54,853 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:54,961 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:54,961 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.949  |     0.948
+2020-07-22 23:35:54,961 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.967  |     0.964
+2020-07-22 23:35:54,961 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:54,962 - INFO - allennlp.training.tensorboard_writer - loss               |     0.229  |     0.292
+2020-07-22 23:35:54,962 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:54,962 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   655.400  |       N/A
+2020-07-22 23:35:54,965 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:54,967 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.460423
+2020-07-22 23:35:54,967 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:04
+2020-07-22 23:35:54,967 - INFO - allennlp.training.trainer - Epoch 14/39
+2020-07-22 23:35:54,967 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:35:54,982 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:54,982 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:57,313 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:57,421 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:57,421 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.949  |     0.948
+2020-07-22 23:35:57,421 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.968  |     0.965
+2020-07-22 23:35:57,421 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:57,422 - INFO - allennlp.training.tensorboard_writer - loss               |     0.223  |     0.290
+2020-07-22 23:35:57,422 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:57,422 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:35:57,425 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:57,427 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.459959
+2020-07-22 23:35:57,427 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:02
+2020-07-22 23:35:57,427 - INFO - allennlp.training.trainer - Epoch 15/39
+2020-07-22 23:35:57,427 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:35:57,442 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:57,442 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:35:59,770 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:35:59,878 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:35:59,878 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.950  |     0.948
+2020-07-22 23:35:59,879 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.968  |     0.965
+2020-07-22 23:35:59,879 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:35:59,879 - INFO - allennlp.training.tensorboard_writer - loss               |     0.218  |     0.288
+2020-07-22 23:35:59,879 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:35:59,880 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:35:59,883 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:35:59,885 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.457271
+2020-07-22 23:35:59,885 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:59
+2020-07-22 23:35:59,885 - INFO - allennlp.training.trainer - Epoch 16/39
+2020-07-22 23:35:59,885 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:35:59,899 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:35:59,899 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:02,224 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:02,332 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:02,333 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.950  |     0.948
+2020-07-22 23:36:02,333 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.969  |     0.965
+2020-07-22 23:36:02,333 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:02,334 - INFO - allennlp.training.tensorboard_writer - loss               |     0.213  |     0.286
+2020-07-22 23:36:02,334 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:02,334 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:02,337 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:02,339 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.454355
+2020-07-22 23:36:02,339 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:57
+2020-07-22 23:36:02,339 - INFO - allennlp.training.trainer - Epoch 17/39
+2020-07-22 23:36:02,339 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:02,353 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:02,354 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:04,688 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:04,795 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:04,795 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.951  |     0.948
+2020-07-22 23:36:04,796 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.968  |     0.965
+2020-07-22 23:36:04,796 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:04,796 - INFO - allennlp.training.tensorboard_writer - loss               |     0.209  |     0.285
+2020-07-22 23:36:04,796 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:04,796 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:04,799 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:04,801 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.462292
+2020-07-22 23:36:04,801 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:54
+2020-07-22 23:36:04,802 - INFO - allennlp.training.trainer - Epoch 18/39
+2020-07-22 23:36:04,802 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:04,816 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:04,816 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:07,145 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:07,252 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:07,253 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.951  |     0.948
+2020-07-22 23:36:07,253 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.969  |     0.965
+2020-07-22 23:36:07,253 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:07,254 - INFO - allennlp.training.tensorboard_writer - loss               |     0.205  |     0.284
+2020-07-22 23:36:07,254 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:07,254 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:07,257 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:07,259 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.457485
+2020-07-22 23:36:07,259 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:52
+2020-07-22 23:36:07,259 - INFO - allennlp.training.trainer - Epoch 19/39
+2020-07-22 23:36:07,259 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:07,273 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:07,274 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:09,601 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:09,709 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:09,709 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.952  |     0.948
+2020-07-22 23:36:09,710 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.970  |     0.966
+2020-07-22 23:36:09,710 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:09,710 - INFO - allennlp.training.tensorboard_writer - loss               |     0.202  |     0.283
+2020-07-22 23:36:09,710 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:09,711 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:09,714 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:09,716 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.456445
+2020-07-22 23:36:09,716 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:49
+2020-07-22 23:36:09,716 - INFO - allennlp.training.trainer - Epoch 20/39
+2020-07-22 23:36:09,716 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:09,730 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:09,730 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:12,070 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:12,182 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:12,182 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.953  |     0.948
+2020-07-22 23:36:12,182 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.971  |     0.966
+2020-07-22 23:36:12,183 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:12,183 - INFO - allennlp.training.tensorboard_writer - loss               |     0.198  |     0.282
+2020-07-22 23:36:12,183 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:12,183 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:12,186 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:12,188 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.472616
+2020-07-22 23:36:12,188 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:47
+2020-07-22 23:36:12,188 - INFO - allennlp.training.trainer - Epoch 21/39
+2020-07-22 23:36:12,188 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:12,203 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:12,203 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:14,554 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:14,660 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:14,660 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.954  |     0.948
+2020-07-22 23:36:14,660 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.971  |     0.966
+2020-07-22 23:36:14,660 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:14,661 - INFO - allennlp.training.tensorboard_writer - loss               |     0.195  |     0.282
+2020-07-22 23:36:14,661 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:14,661 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:14,664 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:14,666 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.477732
+2020-07-22 23:36:14,666 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:44
+2020-07-22 23:36:14,666 - INFO - allennlp.training.trainer - Epoch 22/39
+2020-07-22 23:36:14,666 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:14,681 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:14,681 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:17,007 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:17,114 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:17,115 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.955  |     0.949
+2020-07-22 23:36:17,115 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.972  |     0.966
+2020-07-22 23:36:17,115 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:17,115 - INFO - allennlp.training.tensorboard_writer - loss               |     0.191  |     0.281
+2020-07-22 23:36:17,116 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:17,116 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:17,119 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:17,121 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.454649
+2020-07-22 23:36:17,121 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:42
+2020-07-22 23:36:17,121 - INFO - allennlp.training.trainer - Epoch 23/39
+2020-07-22 23:36:17,121 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:17,137 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:17,138 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:19,496 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:19,604 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:19,604 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.955  |     0.949
+2020-07-22 23:36:19,604 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.973  |     0.966
+2020-07-22 23:36:19,604 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:19,605 - INFO - allennlp.training.tensorboard_writer - loss               |     0.189  |     0.281
+2020-07-22 23:36:19,605 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:19,605 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:19,608 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:19,610 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.489197
+2020-07-22 23:36:19,610 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:39
+2020-07-22 23:36:19,610 - INFO - allennlp.training.trainer - Epoch 24/39
+2020-07-22 23:36:19,610 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:19,625 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:19,625 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:21,950 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:22,057 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:22,057 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.956  |     0.949
+2020-07-22 23:36:22,058 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.973  |     0.966
+2020-07-22 23:36:22,058 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:22,058 - INFO - allennlp.training.tensorboard_writer - loss               |     0.187  |     0.280
+2020-07-22 23:36:22,059 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:22,059 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:22,062 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:22,064 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.453382
+2020-07-22 23:36:22,064 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:37
+2020-07-22 23:36:22,064 - INFO - allennlp.training.trainer - Epoch 25/39
+2020-07-22 23:36:22,064 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:22,078 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:22,078 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:24,407 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:24,514 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:24,515 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.957  |     0.949
+2020-07-22 23:36:24,515 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.974  |     0.967
+2020-07-22 23:36:24,515 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:24,516 - INFO - allennlp.training.tensorboard_writer - loss               |     0.183  |     0.280
+2020-07-22 23:36:24,516 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:24,516 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:24,519 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:24,521 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.457139
+2020-07-22 23:36:24,521 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:34
+2020-07-22 23:36:24,521 - INFO - allennlp.training.trainer - Epoch 26/39
+2020-07-22 23:36:24,521 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:24,535 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:24,535 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:26,865 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:26,971 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:26,972 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.957  |     0.949
+2020-07-22 23:36:26,972 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.974  |     0.967
+2020-07-22 23:36:26,972 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:26,972 - INFO - allennlp.training.tensorboard_writer - loss               |     0.181  |     0.279
+2020-07-22 23:36:26,973 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:26,973 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:26,976 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:26,978 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.456873
+2020-07-22 23:36:26,978 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:32
+2020-07-22 23:36:26,978 - INFO - allennlp.training.trainer - Epoch 27/39
+2020-07-22 23:36:26,978 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:26,993 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:26,993 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:29,325 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:29,432 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:29,433 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.958  |     0.950
+2020-07-22 23:36:29,433 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.975  |     0.967
+2020-07-22 23:36:29,433 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:29,433 - INFO - allennlp.training.tensorboard_writer - loss               |     0.178  |     0.279
+2020-07-22 23:36:29,434 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:29,434 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:29,437 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:29,439 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.460777
+2020-07-22 23:36:29,439 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:29
+2020-07-22 23:36:29,439 - INFO - allennlp.training.trainer - Epoch 28/39
+2020-07-22 23:36:29,439 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:29,454 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:29,455 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:31,809 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:31,916 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:31,916 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.959  |     0.950
+2020-07-22 23:36:31,916 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.976  |     0.967
+2020-07-22 23:36:31,917 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:31,917 - INFO - allennlp.training.tensorboard_writer - loss               |     0.175  |     0.278
+2020-07-22 23:36:31,917 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:31,917 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:31,920 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:31,922 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.483449
+2020-07-22 23:36:31,922 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:27
+2020-07-22 23:36:31,923 - INFO - allennlp.training.trainer - Epoch 29/39
+2020-07-22 23:36:31,923 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:31,937 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:31,937 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:34,303 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:34,429 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:34,430 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.960  |     0.950
+2020-07-22 23:36:34,430 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.977  |     0.967
+2020-07-22 23:36:34,430 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:34,430 - INFO - allennlp.training.tensorboard_writer - loss               |     0.173  |     0.278
+2020-07-22 23:36:34,431 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:34,431 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:34,436 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:34,438 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.515390
+2020-07-22 23:36:34,438 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:24
+2020-07-22 23:36:34,438 - INFO - allennlp.training.trainer - Epoch 30/39
+2020-07-22 23:36:34,438 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:34,453 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:34,453 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:36,837 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:36,950 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:36,950 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.961  |     0.951
+2020-07-22 23:36:36,951 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.978  |     0.968
+2020-07-22 23:36:36,951 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:36,951 - INFO - allennlp.training.tensorboard_writer - loss               |     0.170  |     0.277
+2020-07-22 23:36:36,951 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:36,952 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:36,955 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:36,957 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.518488
+2020-07-22 23:36:36,957 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:22
+2020-07-22 23:36:36,957 - INFO - allennlp.training.trainer - Epoch 31/39
+2020-07-22 23:36:36,957 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:36,972 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:36,973 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:39,401 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:39,509 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:39,511 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.962  |     0.951
+2020-07-22 23:36:39,511 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.979  |     0.967
+2020-07-22 23:36:39,512 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:39,512 - INFO - allennlp.training.tensorboard_writer - loss               |     0.167  |     0.277
+2020-07-22 23:36:39,512 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:39,512 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:39,516 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:39,518 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.561414
+2020-07-22 23:36:39,518 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:19
+2020-07-22 23:36:39,518 - INFO - allennlp.training.trainer - Epoch 32/39
+2020-07-22 23:36:39,518 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:39,533 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:39,533 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:41,879 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:41,986 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:41,986 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.963  |     0.951
+2020-07-22 23:36:41,986 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.979  |     0.966
+2020-07-22 23:36:41,986 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:41,987 - INFO - allennlp.training.tensorboard_writer - loss               |     0.164  |     0.276
+2020-07-22 23:36:41,987 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:41,987 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:41,990 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:41,992 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.474118
+2020-07-22 23:36:41,992 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:17
+2020-07-22 23:36:41,992 - INFO - allennlp.training.trainer - Epoch 33/39
+2020-07-22 23:36:41,992 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:42,009 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:42,010 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:44,402 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:44,510 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:44,512 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.964  |     0.951
+2020-07-22 23:36:44,512 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.980  |     0.966
+2020-07-22 23:36:44,512 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:44,513 - INFO - allennlp.training.tensorboard_writer - loss               |     0.160  |     0.276
+2020-07-22 23:36:44,513 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:44,513 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:44,516 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:44,518 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.525824
+2020-07-22 23:36:44,518 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:14
+2020-07-22 23:36:44,518 - INFO - allennlp.training.trainer - Epoch 34/39
+2020-07-22 23:36:44,518 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:44,534 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:44,535 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:46,911 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:47,019 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:47,019 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.966  |     0.952
+2020-07-22 23:36:47,019 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.981  |     0.966
+2020-07-22 23:36:47,020 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:47,020 - INFO - allennlp.training.tensorboard_writer - loss               |     0.157  |     0.275
+2020-07-22 23:36:47,020 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:47,020 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:47,023 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:47,025 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.507096
+2020-07-22 23:36:47,025 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:12
+2020-07-22 23:36:47,026 - INFO - allennlp.training.trainer - Epoch 35/39
+2020-07-22 23:36:47,026 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:47,040 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:47,040 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:49,371 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:49,479 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:49,479 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.967  |     0.952
+2020-07-22 23:36:49,479 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.981  |     0.966
+2020-07-22 23:36:49,480 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:49,480 - INFO - allennlp.training.tensorboard_writer - loss               |     0.154  |     0.275
+2020-07-22 23:36:49,480 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:49,480 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:49,483 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:49,485 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.459719
+2020-07-22 23:36:49,485 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:09
+2020-07-22 23:36:49,485 - INFO - allennlp.training.trainer - Epoch 36/39
+2020-07-22 23:36:49,485 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:49,501 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:49,502 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:51,850 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:51,958 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:51,958 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.968  |     0.952
+2020-07-22 23:36:51,959 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.981  |     0.966
+2020-07-22 23:36:51,959 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:51,959 - INFO - allennlp.training.tensorboard_writer - loss               |     0.150  |     0.275
+2020-07-22 23:36:51,959 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:51,960 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:51,963 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:51,965 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.479301
+2020-07-22 23:36:51,965 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:07
+2020-07-22 23:36:51,965 - INFO - allennlp.training.trainer - Epoch 37/39
+2020-07-22 23:36:51,965 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:51,979 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:51,979 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:54,307 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:54,415 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:54,416 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.969  |     0.953
+2020-07-22 23:36:54,416 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.982  |     0.967
+2020-07-22 23:36:54,416 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:54,416 - INFO - allennlp.training.tensorboard_writer - loss               |     0.147  |     0.274
+2020-07-22 23:36:54,417 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:54,417 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:54,420 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:54,422 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.457021
+2020-07-22 23:36:54,422 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:04
+2020-07-22 23:36:54,422 - INFO - allennlp.training.trainer - Epoch 38/39
+2020-07-22 23:36:54,422 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:54,436 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:54,436 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:56,768 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:56,877 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:56,877 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.970  |     0.953
+2020-07-22 23:36:56,877 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.982  |     0.967
+2020-07-22 23:36:56,877 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:56,878 - INFO - allennlp.training.tensorboard_writer - loss               |     0.144  |     0.274
+2020-07-22 23:36:56,878 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:56,878 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:56,881 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:56,883 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.461244
+2020-07-22 23:36:56,883 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:02
+2020-07-22 23:36:56,883 - INFO - allennlp.training.trainer - Epoch 39/39
+2020-07-22 23:36:56,883 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.352
+2020-07-22 23:36:56,898 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:36:56,898 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:36:59,234 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:36:59,342 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:36:59,342 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.971  |     0.953
+2020-07-22 23:36:59,343 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.982  |     0.966
+2020-07-22 23:36:59,343 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:36:59,343 - INFO - allennlp.training.tensorboard_writer - loss               |     0.140  |     0.273
+2020-07-22 23:36:59,343 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:36:59,344 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.352  |       N/A
+2020-07-22 23:36:59,347 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/simple_tagger_ner/best.th'.
+2020-07-22 23:36:59,349 - INFO - allennlp.training.trainer - Epoch duration: 0:00:02.465357
+2020-07-22 23:36:59,349 - INFO - allennlp.training.checkpointer - loading best weights
+2020-07-22 23:36:59,350 - INFO - allennlp.commands.train - The model will be evaluated using the best epoch weights.
+2020-07-22 23:36:59,350 - INFO - allennlp.training.util - Iterating over dataset
+2020-07-22 23:36:59,511 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 39,
+  "peak_worker_0_memory_MB": 658.352,
+  "peak_gpu_0_memory_MB": 2,
+  "training_duration": "0:01:39.170532",
+  "training_start_epoch": 0,
+  "training_epochs": 39,
+  "epoch": 39,
+  "training_accuracy": 0.9714302072598191,
+  "training_accuracy3": 0.9824802473376847,
+  "training_loss": 0.14030409733886304,
+  "training_reg_loss": 0.0,
+  "training_worker_0_memory_MB": 658.352,
+  "training_gpu_0_memory_MB": 2,
+  "validation_accuracy": 0.9531940712490249,
+  "validation_accuracy3": 0.9664557510618011,
+  "validation_loss": 0.2734900265932083,
+  "validation_reg_loss": 0.0,
+  "best_validation_accuracy": 0.9531940712490249,
+  "best_validation_accuracy3": 0.9664557510618011,
+  "best_validation_loss": 0.2734900265932083,
+  "best_validation_reg_loss": 0.0,
+  "test_accuracy": 0.9531940712490249,
+  "test_accuracy3": 0.9664557510618011,
+  "test_loss": 0.2734900265932083
+}
+2020-07-22 23:36:59,513 - INFO - allennlp.models.archival - archiving weights and vocabulary to ./model/simple_tagger_ner/model.tar.gz

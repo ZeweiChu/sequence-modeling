@@ -1,0 +1,63 @@
+{
+    "dataset_reader": {
+        "type": "conll2003",
+        "tag_label": "ner",
+        "token_indexers": {
+            "token_characters": {
+                "type": "characters"
+            },
+            "tokens": {
+                "type": "single_id",
+                "lowercase_tokens": true
+            }
+        }
+    },
+    "model": {
+        "type": "neural_crf",
+        "encoder": {
+            "type": "pass_through",
+            "input_dim": 130
+        },
+        "text_field_embedder": {
+            "token_embedders": {
+                "token_characters": {
+                    "type": "character_encoding",
+                    "embedding": {
+                        "embedding_dim": 25
+                    },
+                    "encoder": {
+                        "type": "rnn",
+                        "dropout": 0.25,
+                        "hidden_size": 80,
+                        "input_size": 25,
+                        "num_layers": 2
+                    }
+                },
+                "tokens": {
+                    "type": "embedding",
+                    "embedding_dim": 50
+                }
+            }
+        }
+    },
+    "train_data_path": "./data/twitter_train.ner",
+    "validation_data_path": "./data/twitter_dev.ner",
+    "test_data_path": "./data/twitter_dev.ner",
+    "trainer": {
+        "cuda_device": -1,
+        "num_epochs": 50,
+        "optimizer": "adam",
+        "patience": 10
+    },
+    "data_loader": {
+        "batch_sampler": {
+            "type": "bucket",
+            "batch_size": 80,
+            "padding_noise": 0,
+            "sorting_keys": [
+                "tokens"
+            ]
+        }
+    },
+    "evaluate_on_test": true
+}

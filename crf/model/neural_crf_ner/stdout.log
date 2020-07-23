@@ -1,0 +1,985 @@
+2020-07-22 23:48:14,387 - INFO - allennlp.common.params - random_seed = 13370
+2020-07-22 23:48:14,388 - INFO - allennlp.common.params - numpy_seed = 1337
+2020-07-22 23:48:14,388 - INFO - allennlp.common.params - pytorch_seed = 133
+2020-07-22 23:48:14,634 - INFO - allennlp.common.checks - Pytorch version: 1.5.1
+2020-07-22 23:48:14,634 - INFO - allennlp.common.params - type = default
+2020-07-22 23:48:14,634 - INFO - allennlp.common.params - dataset_reader.type = conll2003
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.lazy = False
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.cache_directory = None
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.max_instances = None
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.manual_distributed_sharding = False
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.manual_multi_process_sharding = False
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.type = characters
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.namespace = token_characters
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.character_tokenizer = <allennlp.data.tokenizers.character_tokenizer.CharacterTokenizer object at 0x7f1015866278>
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.start_tokens = None
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.end_tokens = None
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.min_padding_length = 0
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.token_indexers.token_characters.token_min_padding_length = 0
+2020-07-22 23:48:14,635 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.type = single_id
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.namespace = tokens
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.lowercase_tokens = True
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.start_tokens = None
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.end_tokens = None
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.feature_name = text
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.default_value = THIS IS A REALLY UNLIKELY VALUE THAT HAS TO BE A STRING
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.token_indexers.tokens.token_min_padding_length = 0
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.tag_label = ner
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.feature_labels = ()
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.coding_scheme = IOB1
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - dataset_reader.label_namespace = labels
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - train_data_path = ./data/twitter_train.ner
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - vocabulary = None
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - datasets_for_vocab_creation = None
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - validation_dataset_reader = None
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - validation_data_path = ./data/twitter_dev.ner
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - validation_data_loader = None
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - test_data_path = ./data/twitter_dev.ner
+2020-07-22 23:48:14,636 - INFO - allennlp.common.params - evaluate_on_test = True
+2020-07-22 23:48:14,637 - INFO - allennlp.common.params - batch_weight_key = 
+2020-07-22 23:48:14,637 - INFO - allennlp.training.util - Reading training data from ./data/twitter_train.ner
+2020-07-22 23:48:14,637 - INFO - allennlp.data.dataset_readers.conll2003 - Reading instances from lines in file at: ./data/twitter_train.ner
+2020-07-22 23:48:14,749 - INFO - allennlp.training.util - Reading validation data from ./data/twitter_dev.ner
+2020-07-22 23:48:14,750 - INFO - allennlp.data.dataset_readers.conll2003 - Reading instances from lines in file at: ./data/twitter_dev.ner
+2020-07-22 23:48:14,769 - INFO - allennlp.training.util - Reading test data from ./data/twitter_dev.ner
+2020-07-22 23:48:14,769 - INFO - allennlp.data.dataset_readers.conll2003 - Reading instances from lines in file at: ./data/twitter_dev.ner
+2020-07-22 23:48:14,788 - INFO - allennlp.data.vocabulary - Fitting token dictionary from dataset.
+2020-07-22 23:48:14,983 - INFO - allennlp.common.params - model.type = neural_crf
+2020-07-22 23:48:14,983 - INFO - allennlp.common.params - model.text_field_embedder.type = basic
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.type = character_encoding
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.embedding_dim = 25
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.num_embeddings = None
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.projection_dim = None
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.weight = None
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.padding_index = None
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.trainable = True
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.max_norm = None
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.norm_type = 2.0
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.scale_grad_by_freq = False
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.sparse = False
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.vocab_namespace = tokens
+2020-07-22 23:48:14,984 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.embedding.pretrained_file = None
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.type = rnn
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.input_size = 25
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.hidden_size = 80
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.num_layers = 2
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.nonlinearity = tanh
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.bias = True
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.dropout = 0.25
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.encoder.bidirectional = False
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.token_characters.dropout = 0.0
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.type = embedding
+2020-07-22 23:48:14,986 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.embedding_dim = 50
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.num_embeddings = None
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.projection_dim = None
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.weight = None
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.padding_index = None
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.trainable = True
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.max_norm = None
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.norm_type = 2.0
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.scale_grad_by_freq = False
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.sparse = False
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.vocab_namespace = tokens
+2020-07-22 23:48:14,987 - INFO - allennlp.common.params - model.text_field_embedder.token_embedders.tokens.pretrained_file = None
+2020-07-22 23:48:14,989 - INFO - allennlp.common.params - model.encoder.type = pass_through
+2020-07-22 23:48:14,989 - INFO - allennlp.common.params - model.encoder.input_dim = 130
+2020-07-22 23:48:14,989 - INFO - allennlp.common.params - model.label_namespace = labels
+2020-07-22 23:48:14,989 - INFO - allennlp.common.params - model.feedforward = None
+2020-07-22 23:48:14,989 - INFO - allennlp.common.params - model.label_encoding = None
+2020-07-22 23:48:14,989 - INFO - allennlp.common.params - model.include_start_end_transitions = True
+2020-07-22 23:48:14,989 - INFO - allennlp.common.params - model.constrain_crf_decoding = None
+2020-07-22 23:48:14,989 - INFO - allennlp.common.params - model.calculate_span_f1 = None
+2020-07-22 23:48:14,989 - INFO - allennlp.common.params - model.dropout = None
+2020-07-22 23:48:14,990 - INFO - allennlp.common.params - model.verbose_metrics = False
+2020-07-22 23:48:14,990 - INFO - allennlp.common.params - model.initializer = <allennlp.nn.initializers.InitializerApplicator object at 0x7f100da3c4a8>
+2020-07-22 23:48:14,990 - INFO - allennlp.common.params - model.regularizer = None
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers - Initializing parameters
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers - Done initializing parameters; the following parameters are using their default initialization from their code
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    crf._constraint_mask
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    crf.end_transitions
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    crf.start_transitions
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    crf.transitions
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    tag_projection_layer._module.bias
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    tag_projection_layer._module.weight
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._embedding._module.weight
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._encoder._module._module.bias_hh_l0
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._encoder._module._module.bias_hh_l1
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._encoder._module._module.bias_ih_l0
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._encoder._module._module.bias_ih_l1
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._encoder._module._module.weight_hh_l0
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._encoder._module._module.weight_hh_l1
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._encoder._module._module.weight_ih_l0
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_token_characters._encoder._module._module.weight_ih_l1
+2020-07-22 23:48:14,990 - INFO - allennlp.nn.initializers -    text_field_embedder.token_embedder_tokens.weight
+2020-07-22 23:48:14,991 - INFO - filelock - Lock 139706924549848 acquired on ./model/neural_crf_ner/vocabulary/.lock
+2020-07-22 23:48:15,001 - INFO - filelock - Lock 139706924549848 released on ./model/neural_crf_ner/vocabulary/.lock
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.type = default
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.batch_size = 1
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.shuffle = False
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.sampler = None
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.pin_memory = False
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.drop_last = False
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.timeout = 0
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.worker_init_fn = None
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.multiprocessing_context = None
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2020-07-22 23:48:15,002 - INFO - allennlp.common.params - data_loader.batch_sampler.type = bucket
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.batch_sampler.batch_size = 80
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.batch_sampler.sorting_keys = ['tokens']
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.batch_sampler.padding_noise = 0
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.batch_sampler.drop_last = False
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.type = default
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.batch_size = 1
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.shuffle = False
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.sampler = None
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.pin_memory = False
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.drop_last = False
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.timeout = 0
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.worker_init_fn = None
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.multiprocessing_context = None
+2020-07-22 23:48:15,003 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.batch_sampler.type = bucket
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.batch_sampler.batch_size = 80
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.batch_sampler.sorting_keys = ['tokens']
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.batch_sampler.padding_noise = 0
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.batch_sampler.drop_last = False
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.type = default
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.batch_size = 1
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.shuffle = False
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.sampler = None
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.num_workers = 0
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.pin_memory = False
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.drop_last = False
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.timeout = 0
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.worker_init_fn = None
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.multiprocessing_context = None
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.batches_per_epoch = None
+2020-07-22 23:48:15,004 - INFO - allennlp.common.params - data_loader.batch_sampler.type = bucket
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - data_loader.batch_sampler.batch_size = 80
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - data_loader.batch_sampler.sorting_keys = ['tokens']
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - data_loader.batch_sampler.padding_noise = 0
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - data_loader.batch_sampler.drop_last = False
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.type = gradient_descent
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.patience = 10
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.validation_metric = -loss
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.num_epochs = 50
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.cuda_device = -1
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.grad_norm = None
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.grad_clipping = None
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.distributed = None
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.world_size = 1
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.num_gradient_accumulation_steps = 1
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.opt_level = None
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.no_grad = None
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.optimizer = adam
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.learning_rate_scheduler = None
+2020-07-22 23:48:15,005 - INFO - allennlp.common.params - trainer.momentum_scheduler = None
+2020-07-22 23:48:15,006 - INFO - allennlp.common.params - trainer.tensorboard_writer = None
+2020-07-22 23:48:15,006 - INFO - allennlp.common.params - trainer.moving_average = None
+2020-07-22 23:48:15,006 - INFO - allennlp.common.params - trainer.checkpointer = None
+2020-07-22 23:48:15,006 - INFO - allennlp.common.params - trainer.batch_callbacks = None
+2020-07-22 23:48:15,006 - INFO - allennlp.common.params - trainer.epoch_callbacks = None
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - The following parameters are Frozen (without gradient):
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - crf._constraint_mask
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - The following parameters are Tunable (with gradient):
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._embedding._module.weight
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._encoder._module._module.weight_ih_l0
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._encoder._module._module.weight_hh_l0
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._encoder._module._module.bias_ih_l0
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._encoder._module._module.bias_hh_l0
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._encoder._module._module.weight_ih_l1
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._encoder._module._module.weight_hh_l1
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._encoder._module._module.bias_ih_l1
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - text_field_embedder.token_embedder_token_characters._encoder._module._module.bias_hh_l1
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - text_field_embedder.token_embedder_tokens.weight
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - tag_projection_layer._module.weight
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - tag_projection_layer._module.bias
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - crf.transitions
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - crf.start_transitions
+2020-07-22 23:48:15,006 - INFO - allennlp.common.util - crf.end_transitions
+2020-07-22 23:48:15,006 - INFO - allennlp.common.params - type = adam
+2020-07-22 23:48:15,006 - INFO - allennlp.common.params - parameter_groups = None
+2020-07-22 23:48:15,006 - INFO - allennlp.common.params - lr = 0.001
+2020-07-22 23:48:15,006 - INFO - allennlp.common.params - betas = (0.9, 0.999)
+2020-07-22 23:48:15,006 - INFO - allennlp.common.params - eps = 1e-08
+2020-07-22 23:48:15,007 - INFO - allennlp.common.params - weight_decay = 0.0
+2020-07-22 23:48:15,007 - INFO - allennlp.common.params - amsgrad = False
+2020-07-22 23:48:15,007 - INFO - allennlp.training.optimizers - Number of trainable parameters: 705004
+2020-07-22 23:48:15,008 - INFO - allennlp.training.trainer - Beginning training.
+2020-07-22 23:48:15,008 - INFO - allennlp.training.trainer - Epoch 0/49
+2020-07-22 23:48:15,008 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 496.344
+2020-07-22 23:48:15,020 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:15,021 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:48:19,153 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:48:19,680 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:48:19,681 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.573  |     0.926
+2020-07-22 23:48:19,681 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.576  |     0.928
+2020-07-22 23:48:19,681 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:48:19,681 - INFO - allennlp.training.tensorboard_writer - loss               |  3059.260  |  1136.045
+2020-07-22 23:48:19,681 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:48:19,682 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   496.344  |       N/A
+2020-07-22 23:48:19,686 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:48:19,688 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.680680
+2020-07-22 23:48:19,688 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:49
+2020-07-22 23:48:19,688 - INFO - allennlp.training.trainer - Epoch 1/49
+2020-07-22 23:48:19,689 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 630.024
+2020-07-22 23:48:19,704 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:19,704 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:48:23,712 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:48:24,095 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:48:24,096 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.944  |     0.946
+2020-07-22 23:48:24,096 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.947  |     0.948
+2020-07-22 23:48:24,096 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:48:24,097 - INFO - allennlp.training.tensorboard_writer - loss               |   884.528  |   636.845
+2020-07-22 23:48:24,097 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:48:24,097 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   630.024  |       N/A
+2020-07-22 23:48:24,101 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:48:24,103 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.414989
+2020-07-22 23:48:24,104 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:38
+2020-07-22 23:48:24,104 - INFO - allennlp.training.trainer - Epoch 2/49
+2020-07-22 23:48:24,104 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 644.116
+2020-07-22 23:48:24,118 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:24,118 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:48:28,055 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:48:28,445 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:48:28,445 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:48:28,445 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.949  |     0.948
+2020-07-22 23:48:28,445 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:48:28,446 - INFO - allennlp.training.tensorboard_writer - loss               |   608.058  |   545.059
+2020-07-22 23:48:28,446 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:48:28,446 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   644.116  |       N/A
+2020-07-22 23:48:28,450 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:48:28,453 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.349396
+2020-07-22 23:48:28,453 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:30
+2020-07-22 23:48:28,453 - INFO - allennlp.training.trainer - Epoch 3/49
+2020-07-22 23:48:28,453 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 656.82
+2020-07-22 23:48:28,469 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:28,470 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:48:32,496 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:48:32,893 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:48:32,893 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:48:32,893 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.949  |     0.948
+2020-07-22 23:48:32,893 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:48:32,893 - INFO - allennlp.training.tensorboard_writer - loss               |   544.293  |   511.754
+2020-07-22 23:48:32,893 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:48:32,894 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   656.820  |       N/A
+2020-07-22 23:48:32,899 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:48:32,902 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.448747
+2020-07-22 23:48:32,902 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:25
+2020-07-22 23:48:32,902 - INFO - allennlp.training.trainer - Epoch 4/49
+2020-07-22 23:48:32,902 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 656.82
+2020-07-22 23:48:32,917 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:32,917 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:48:36,895 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:48:37,297 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:48:37,298 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:48:37,298 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.949  |     0.948
+2020-07-22 23:48:37,298 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:48:37,298 - INFO - allennlp.training.tensorboard_writer - loss               |   513.139  |   491.811
+2020-07-22 23:48:37,298 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:48:37,299 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   656.820  |       N/A
+2020-07-22 23:48:37,303 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:48:37,307 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.404705
+2020-07-22 23:48:37,307 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:20
+2020-07-22 23:48:37,307 - INFO - allennlp.training.trainer - Epoch 5/49
+2020-07-22 23:48:37,307 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 656.82
+2020-07-22 23:48:37,323 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:37,324 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:48:41,293 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:48:41,662 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:48:41,662 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:48:41,662 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.949  |     0.948
+2020-07-22 23:48:41,662 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:48:41,663 - INFO - allennlp.training.tensorboard_writer - loss               |   487.071  |   474.402
+2020-07-22 23:48:41,663 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:48:41,663 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   656.820  |       N/A
+2020-07-22 23:48:41,667 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:48:41,670 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.363160
+2020-07-22 23:48:41,670 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:15
+2020-07-22 23:48:41,670 - INFO - allennlp.training.trainer - Epoch 6/49
+2020-07-22 23:48:41,670 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 656.82
+2020-07-22 23:48:41,685 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:41,685 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:48:45,700 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:48:46,101 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:48:46,101 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:48:46,102 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.949  |     0.948
+2020-07-22 23:48:46,102 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:48:46,102 - INFO - allennlp.training.tensorboard_writer - loss               |   459.931  |   457.066
+2020-07-22 23:48:46,102 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:48:46,102 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   656.820  |       N/A
+2020-07-22 23:48:46,107 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:48:46,110 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.440097
+2020-07-22 23:48:46,110 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:11
+2020-07-22 23:48:46,110 - INFO - allennlp.training.trainer - Epoch 7/49
+2020-07-22 23:48:46,110 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 656.82
+2020-07-22 23:48:46,125 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:46,125 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:48:50,160 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:48:50,542 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:48:50,542 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:48:50,542 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.949  |     0.948
+2020-07-22 23:48:50,543 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:48:50,543 - INFO - allennlp.training.tensorboard_writer - loss               |   430.475  |   441.193
+2020-07-22 23:48:50,543 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:48:50,543 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   656.820  |       N/A
+2020-07-22 23:48:50,548 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:48:50,551 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.441017
+2020-07-22 23:48:50,551 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:06
+2020-07-22 23:48:50,551 - INFO - allennlp.training.trainer - Epoch 8/49
+2020-07-22 23:48:50,551 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 656.82
+2020-07-22 23:48:50,566 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:50,567 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:48:54,570 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:48:54,965 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:48:54,965 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:48:54,965 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.949  |     0.948
+2020-07-22 23:48:54,966 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:48:54,966 - INFO - allennlp.training.tensorboard_writer - loss               |   402.202  |   427.476
+2020-07-22 23:48:54,966 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:48:54,966 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   656.820  |       N/A
+2020-07-22 23:48:54,971 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:48:54,973 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.421994
+2020-07-22 23:48:54,973 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:03:02
+2020-07-22 23:48:54,973 - INFO - allennlp.training.trainer - Epoch 9/49
+2020-07-22 23:48:54,974 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:48:54,988 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:54,989 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:48:59,064 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:48:59,479 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:48:59,480 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.947  |     0.946
+2020-07-22 23:48:59,480 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.949  |     0.948
+2020-07-22 23:48:59,480 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:48:59,481 - INFO - allennlp.training.tensorboard_writer - loss               |   374.646  |   416.277
+2020-07-22 23:48:59,481 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:48:59,481 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:48:59,485 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:48:59,488 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.514797
+2020-07-22 23:48:59,488 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:57
+2020-07-22 23:48:59,488 - INFO - allennlp.training.trainer - Epoch 10/49
+2020-07-22 23:48:59,488 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:48:59,505 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:48:59,506 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:03,602 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:03,999 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:03,999 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.948  |     0.947
+2020-07-22 23:49:04,000 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.950  |     0.949
+2020-07-22 23:49:04,000 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:04,000 - INFO - allennlp.training.tensorboard_writer - loss               |   352.257  |   408.149
+2020-07-22 23:49:04,001 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:04,001 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:49:04,005 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:04,008 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.519670
+2020-07-22 23:49:04,008 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:53
+2020-07-22 23:49:04,008 - INFO - allennlp.training.trainer - Epoch 11/49
+2020-07-22 23:49:04,008 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:49:04,023 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:04,023 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:08,115 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:08,488 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:08,489 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.948  |     0.948
+2020-07-22 23:49:08,489 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.951  |     0.950
+2020-07-22 23:49:08,490 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:08,490 - INFO - allennlp.training.tensorboard_writer - loss               |   333.547  |   403.244
+2020-07-22 23:49:08,490 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:08,490 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:49:08,495 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:08,497 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.489081
+2020-07-22 23:49:08,497 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:49
+2020-07-22 23:49:08,497 - INFO - allennlp.training.trainer - Epoch 12/49
+2020-07-22 23:49:08,498 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:49:08,512 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:08,512 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:12,494 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:12,896 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:12,897 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.949  |     0.948
+2020-07-22 23:49:12,897 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.951  |     0.950
+2020-07-22 23:49:12,897 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:12,897 - INFO - allennlp.training.tensorboard_writer - loss               |   319.794  |   399.281
+2020-07-22 23:49:12,898 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:12,898 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:49:12,902 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:12,905 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.407792
+2020-07-22 23:49:12,905 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:44
+2020-07-22 23:49:12,905 - INFO - allennlp.training.trainer - Epoch 13/49
+2020-07-22 23:49:12,905 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:49:12,920 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:12,920 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:16,956 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:17,346 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:17,346 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.949  |     0.948
+2020-07-22 23:49:17,347 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.951  |     0.950
+2020-07-22 23:49:17,347 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:17,347 - INFO - allennlp.training.tensorboard_writer - loss               |   307.127  |   396.775
+2020-07-22 23:49:17,347 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:17,347 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:49:17,352 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:17,355 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.449980
+2020-07-22 23:49:17,355 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:40
+2020-07-22 23:49:17,355 - INFO - allennlp.training.trainer - Epoch 14/49
+2020-07-22 23:49:17,356 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:49:17,370 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:17,371 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:21,327 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:21,714 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:21,714 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.950  |     0.948
+2020-07-22 23:49:21,715 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.952  |     0.950
+2020-07-22 23:49:21,715 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:21,715 - INFO - allennlp.training.tensorboard_writer - loss               |   297.915  |   395.385
+2020-07-22 23:49:21,715 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:21,716 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:49:21,720 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:21,723 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.367343
+2020-07-22 23:49:21,723 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:35
+2020-07-22 23:49:21,723 - INFO - allennlp.training.trainer - Epoch 15/49
+2020-07-22 23:49:21,723 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:49:21,737 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:21,738 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:25,798 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:26,185 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:26,185 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.951  |     0.948
+2020-07-22 23:49:26,185 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.953  |     0.950
+2020-07-22 23:49:26,185 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:26,186 - INFO - allennlp.training.tensorboard_writer - loss               |   289.572  |   393.385
+2020-07-22 23:49:26,186 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:26,186 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:49:26,191 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:26,194 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.471403
+2020-07-22 23:49:26,194 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:31
+2020-07-22 23:49:26,194 - INFO - allennlp.training.trainer - Epoch 16/49
+2020-07-22 23:49:26,195 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:49:26,210 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:26,211 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:30,178 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:30,576 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:30,577 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.951  |     0.948
+2020-07-22 23:49:30,577 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.953  |     0.950
+2020-07-22 23:49:30,577 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:30,577 - INFO - allennlp.training.tensorboard_writer - loss               |   283.060  |   392.500
+2020-07-22 23:49:30,577 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:30,578 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:49:30,583 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:30,586 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.391276
+2020-07-22 23:49:30,586 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:26
+2020-07-22 23:49:30,586 - INFO - allennlp.training.trainer - Epoch 17/49
+2020-07-22 23:49:30,586 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:49:30,600 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:30,601 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:34,596 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:34,995 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:34,996 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.952  |     0.948
+2020-07-22 23:49:34,996 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.954  |     0.950
+2020-07-22 23:49:34,996 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:34,997 - INFO - allennlp.training.tensorboard_writer - loss               |   277.745  |   391.495
+2020-07-22 23:49:34,997 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:34,997 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:49:35,001 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:35,004 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.418326
+2020-07-22 23:49:35,004 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:22
+2020-07-22 23:49:35,004 - INFO - allennlp.training.trainer - Epoch 18/49
+2020-07-22 23:49:35,004 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:49:35,019 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:35,020 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:39,022 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:39,432 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:39,433 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.957  |     0.948
+2020-07-22 23:49:39,433 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.959  |     0.950
+2020-07-22 23:49:39,433 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:39,433 - INFO - allennlp.training.tensorboard_writer - loss               |   271.774  |   390.426
+2020-07-22 23:49:39,433 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:39,433 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:49:39,438 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:39,442 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.437307
+2020-07-22 23:49:39,442 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:17
+2020-07-22 23:49:39,442 - INFO - allennlp.training.trainer - Epoch 19/49
+2020-07-22 23:49:39,442 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 658.088
+2020-07-22 23:49:39,458 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:39,460 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:43,508 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:43,901 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:43,901 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.958  |     0.948
+2020-07-22 23:49:43,901 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.960  |     0.950
+2020-07-22 23:49:43,902 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:43,902 - INFO - allennlp.training.tensorboard_writer - loss               |   266.956  |   390.133
+2020-07-22 23:49:43,902 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:43,902 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   658.088  |       N/A
+2020-07-22 23:49:43,907 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:43,910 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.468576
+2020-07-22 23:49:43,910 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:13
+2020-07-22 23:49:43,910 - INFO - allennlp.training.trainer - Epoch 20/49
+2020-07-22 23:49:43,911 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:49:43,926 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:43,926 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:47,922 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:48,307 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:48,307 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.958  |     0.947
+2020-07-22 23:49:48,307 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.960  |     0.949
+2020-07-22 23:49:48,307 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:48,308 - INFO - allennlp.training.tensorboard_writer - loss               |   261.731  |   388.485
+2020-07-22 23:49:48,308 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:48,308 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:49:48,313 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:48,316 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.405827
+2020-07-22 23:49:48,316 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:08
+2020-07-22 23:49:48,316 - INFO - allennlp.training.trainer - Epoch 21/49
+2020-07-22 23:49:48,316 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:49:48,331 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:48,332 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:52,369 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:52,766 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:52,767 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.958  |     0.948
+2020-07-22 23:49:52,767 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.960  |     0.950
+2020-07-22 23:49:52,767 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:52,767 - INFO - allennlp.training.tensorboard_writer - loss               |   257.389  |   388.208
+2020-07-22 23:49:52,768 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:52,768 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:49:52,773 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:52,776 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.459378
+2020-07-22 23:49:52,776 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:02:04
+2020-07-22 23:49:52,776 - INFO - allennlp.training.trainer - Epoch 22/49
+2020-07-22 23:49:52,776 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:49:52,791 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:52,791 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:49:56,784 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:49:57,171 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:49:57,171 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.958  |     0.948
+2020-07-22 23:49:57,171 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.960  |     0.950
+2020-07-22 23:49:57,172 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:49:57,172 - INFO - allennlp.training.tensorboard_writer - loss               |   252.520  |   386.477
+2020-07-22 23:49:57,172 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:49:57,172 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:49:57,176 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:49:57,179 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.403288
+2020-07-22 23:49:57,179 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:59
+2020-07-22 23:49:57,179 - INFO - allennlp.training.trainer - Epoch 23/49
+2020-07-22 23:49:57,179 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:49:57,194 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:49:57,195 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:01,151 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:01,545 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:01,546 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.958  |     0.948
+2020-07-22 23:50:01,546 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.961  |     0.950
+2020-07-22 23:50:01,546 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:01,547 - INFO - allennlp.training.tensorboard_writer - loss               |   248.229  |   385.563
+2020-07-22 23:50:01,547 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:01,547 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:01,551 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:01,554 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.374766
+2020-07-22 23:50:01,554 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:55
+2020-07-22 23:50:01,554 - INFO - allennlp.training.trainer - Epoch 24/49
+2020-07-22 23:50:01,554 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:01,569 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:01,569 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:05,544 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:05,948 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:05,948 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.959  |     0.949
+2020-07-22 23:50:05,948 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.961  |     0.951
+2020-07-22 23:50:05,949 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:05,949 - INFO - allennlp.training.tensorboard_writer - loss               |   243.357  |   384.766
+2020-07-22 23:50:05,949 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:05,950 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:05,954 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:05,957 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.402530
+2020-07-22 23:50:05,957 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:50
+2020-07-22 23:50:05,957 - INFO - allennlp.training.trainer - Epoch 25/49
+2020-07-22 23:50:05,957 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:05,971 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:05,972 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:09,868 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:10,270 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:10,271 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.961  |     0.949
+2020-07-22 23:50:10,271 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.963  |     0.951
+2020-07-22 23:50:10,271 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:10,271 - INFO - allennlp.training.tensorboard_writer - loss               |   238.381  |   383.783
+2020-07-22 23:50:10,272 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:10,272 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:10,277 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:10,280 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.323087
+2020-07-22 23:50:10,280 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:46
+2020-07-22 23:50:10,280 - INFO - allennlp.training.trainer - Epoch 26/49
+2020-07-22 23:50:10,280 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:10,295 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:10,295 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:14,353 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:14,739 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:14,739 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.961  |     0.949
+2020-07-22 23:50:14,739 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.963  |     0.951
+2020-07-22 23:50:14,739 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:14,740 - INFO - allennlp.training.tensorboard_writer - loss               |   233.404  |   382.863
+2020-07-22 23:50:14,740 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:14,740 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:14,744 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:14,747 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.467101
+2020-07-22 23:50:14,747 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:42
+2020-07-22 23:50:14,747 - INFO - allennlp.training.trainer - Epoch 27/49
+2020-07-22 23:50:14,747 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:14,762 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:14,762 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:18,807 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:19,191 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:19,192 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.962  |     0.949
+2020-07-22 23:50:19,192 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.964  |     0.951
+2020-07-22 23:50:19,192 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:19,192 - INFO - allennlp.training.tensorboard_writer - loss               |   227.984  |   380.844
+2020-07-22 23:50:19,193 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:19,193 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:19,197 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:19,200 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.452655
+2020-07-22 23:50:19,200 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:37
+2020-07-22 23:50:19,200 - INFO - allennlp.training.trainer - Epoch 28/49
+2020-07-22 23:50:19,200 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:19,215 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:19,215 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:23,273 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:23,685 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:23,686 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.963  |     0.949
+2020-07-22 23:50:23,686 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.966  |     0.951
+2020-07-22 23:50:23,686 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:23,686 - INFO - allennlp.training.tensorboard_writer - loss               |   222.517  |   379.219
+2020-07-22 23:50:23,686 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:23,686 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:23,691 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:23,694 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.494399
+2020-07-22 23:50:23,694 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:33
+2020-07-22 23:50:23,695 - INFO - allennlp.training.trainer - Epoch 29/49
+2020-07-22 23:50:23,695 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:23,710 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:23,710 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:27,659 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:28,052 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:28,052 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.963  |     0.949
+2020-07-22 23:50:28,053 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.965  |     0.951
+2020-07-22 23:50:28,053 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:28,053 - INFO - allennlp.training.tensorboard_writer - loss               |   216.784  |   377.619
+2020-07-22 23:50:28,053 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:28,053 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:28,058 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:28,060 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.365938
+2020-07-22 23:50:28,061 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:28
+2020-07-22 23:50:28,061 - INFO - allennlp.training.trainer - Epoch 30/49
+2020-07-22 23:50:28,061 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:28,076 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:28,076 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:32,103 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:32,494 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:32,494 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.964  |     0.950
+2020-07-22 23:50:32,495 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.966  |     0.952
+2020-07-22 23:50:32,495 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:32,495 - INFO - allennlp.training.tensorboard_writer - loss               |   210.898  |   377.701
+2020-07-22 23:50:32,495 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:32,495 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:32,501 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.440675
+2020-07-22 23:50:32,501 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:24
+2020-07-22 23:50:32,501 - INFO - allennlp.training.trainer - Epoch 31/49
+2020-07-22 23:50:32,501 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:32,517 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:32,517 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:36,563 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:36,959 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:36,959 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.966  |     0.950
+2020-07-22 23:50:36,959 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.968  |     0.952
+2020-07-22 23:50:36,959 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:36,959 - INFO - allennlp.training.tensorboard_writer - loss               |   204.778  |   375.037
+2020-07-22 23:50:36,959 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:36,960 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:36,965 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:36,968 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.466426
+2020-07-22 23:50:36,968 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:19
+2020-07-22 23:50:36,968 - INFO - allennlp.training.trainer - Epoch 32/49
+2020-07-22 23:50:36,968 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:36,983 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:36,983 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:41,012 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:41,415 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:41,415 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.965  |     0.951
+2020-07-22 23:50:41,415 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.967  |     0.953
+2020-07-22 23:50:41,415 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:41,416 - INFO - allennlp.training.tensorboard_writer - loss               |   198.318  |   373.763
+2020-07-22 23:50:41,416 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:41,416 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:41,421 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:41,424 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.455660
+2020-07-22 23:50:41,424 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:15
+2020-07-22 23:50:41,424 - INFO - allennlp.training.trainer - Epoch 33/49
+2020-07-22 23:50:41,424 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:41,439 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:41,439 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:45,442 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:45,846 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:45,847 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.968  |     0.950
+2020-07-22 23:50:45,847 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.970  |     0.952
+2020-07-22 23:50:45,847 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:45,848 - INFO - allennlp.training.tensorboard_writer - loss               |   191.863  |   371.816
+2020-07-22 23:50:45,848 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:45,848 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:45,853 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:45,855 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.431623
+2020-07-22 23:50:45,855 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:10
+2020-07-22 23:50:45,855 - INFO - allennlp.training.trainer - Epoch 34/49
+2020-07-22 23:50:45,856 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:45,871 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:45,871 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:49,908 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:50,282 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:50,282 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.969  |     0.951
+2020-07-22 23:50:50,283 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.971  |     0.953
+2020-07-22 23:50:50,283 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:50,283 - INFO - allennlp.training.tensorboard_writer - loss               |   184.948  |   371.232
+2020-07-22 23:50:50,284 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:50,284 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:50,288 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:50,291 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.435331
+2020-07-22 23:50:50,291 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:06
+2020-07-22 23:50:50,291 - INFO - allennlp.training.trainer - Epoch 35/49
+2020-07-22 23:50:50,291 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:50,306 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:50,306 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:54,328 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:54,722 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:54,723 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.970  |     0.952
+2020-07-22 23:50:54,723 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.972  |     0.954
+2020-07-22 23:50:54,723 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:54,723 - INFO - allennlp.training.tensorboard_writer - loss               |   177.836  |   369.606
+2020-07-22 23:50:54,723 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:54,723 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:54,728 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:54,732 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.440701
+2020-07-22 23:50:54,732 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:01:02
+2020-07-22 23:50:54,732 - INFO - allennlp.training.trainer - Epoch 36/49
+2020-07-22 23:50:54,732 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:54,748 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:54,750 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:50:58,815 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:50:59,195 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:50:59,196 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.973  |     0.953
+2020-07-22 23:50:59,196 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.975  |     0.955
+2020-07-22 23:50:59,196 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:50:59,196 - INFO - allennlp.training.tensorboard_writer - loss               |   170.707  |   368.629
+2020-07-22 23:50:59,197 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:50:59,197 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:50:59,201 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:50:59,204 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.471919
+2020-07-22 23:50:59,204 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:57
+2020-07-22 23:50:59,204 - INFO - allennlp.training.trainer - Epoch 37/49
+2020-07-22 23:50:59,204 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:50:59,218 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:50:59,219 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:03,199 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:03,608 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:03,608 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.974  |     0.953
+2020-07-22 23:51:03,608 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.976  |     0.955
+2020-07-22 23:51:03,609 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:03,609 - INFO - allennlp.training.tensorboard_writer - loss               |   164.165  |   366.972
+2020-07-22 23:51:03,609 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:03,609 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:51:03,614 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:51:03,616 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.412718
+2020-07-22 23:51:03,617 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:53
+2020-07-22 23:51:03,617 - INFO - allennlp.training.trainer - Epoch 38/49
+2020-07-22 23:51:03,617 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:51:03,631 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:03,632 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:07,650 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:08,043 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:08,043 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.977  |     0.953
+2020-07-22 23:51:08,044 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.979  |     0.955
+2020-07-22 23:51:08,044 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:08,044 - INFO - allennlp.training.tensorboard_writer - loss               |   156.526  |   366.770
+2020-07-22 23:51:08,045 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:08,045 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:51:08,049 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:51:08,052 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.435145
+2020-07-22 23:51:08,052 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:48
+2020-07-22 23:51:08,052 - INFO - allennlp.training.trainer - Epoch 39/49
+2020-07-22 23:51:08,052 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:51:08,067 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:08,067 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:12,105 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:12,484 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:12,484 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.979  |     0.953
+2020-07-22 23:51:12,485 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.981  |     0.955
+2020-07-22 23:51:12,485 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:12,485 - INFO - allennlp.training.tensorboard_writer - loss               |   149.548  |   364.790
+2020-07-22 23:51:12,485 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:12,485 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:51:12,490 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:51:12,493 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.440778
+2020-07-22 23:51:12,493 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:44
+2020-07-22 23:51:12,493 - INFO - allennlp.training.trainer - Epoch 40/49
+2020-07-22 23:51:12,493 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:51:12,507 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:12,508 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:16,525 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:16,911 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:16,912 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.979  |     0.953
+2020-07-22 23:51:16,912 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.981  |     0.955
+2020-07-22 23:51:16,912 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:16,912 - INFO - allennlp.training.tensorboard_writer - loss               |   142.550  |   364.210
+2020-07-22 23:51:16,913 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:16,913 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:51:16,917 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:51:16,920 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.427375
+2020-07-22 23:51:16,920 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:39
+2020-07-22 23:51:16,920 - INFO - allennlp.training.trainer - Epoch 41/49
+2020-07-22 23:51:16,920 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.004
+2020-07-22 23:51:16,936 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:16,937 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:20,999 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:21,388 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:21,388 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.980  |     0.954
+2020-07-22 23:51:21,388 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.982  |     0.956
+2020-07-22 23:51:21,388 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:21,389 - INFO - allennlp.training.tensorboard_writer - loss               |   136.257  |   363.835
+2020-07-22 23:51:21,389 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:21,389 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.004  |       N/A
+2020-07-22 23:51:21,393 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:51:21,396 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.475865
+2020-07-22 23:51:21,396 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:35
+2020-07-22 23:51:21,396 - INFO - allennlp.training.trainer - Epoch 42/49
+2020-07-22 23:51:21,396 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.016
+2020-07-22 23:51:21,413 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:21,414 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:25,508 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:25,905 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:25,906 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.981  |     0.954
+2020-07-22 23:51:25,906 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.983  |     0.956
+2020-07-22 23:51:25,906 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:25,906 - INFO - allennlp.training.tensorboard_writer - loss               |   129.326  |   362.106
+2020-07-22 23:51:25,907 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:25,907 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.016  |       N/A
+2020-07-22 23:51:25,911 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:51:25,914 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.517554
+2020-07-22 23:51:25,914 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:31
+2020-07-22 23:51:25,914 - INFO - allennlp.training.trainer - Epoch 43/49
+2020-07-22 23:51:25,914 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.016
+2020-07-22 23:51:25,928 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:25,929 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:29,927 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:30,305 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:30,305 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.982  |     0.954
+2020-07-22 23:51:30,306 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.984  |     0.956
+2020-07-22 23:51:30,306 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:30,306 - INFO - allennlp.training.tensorboard_writer - loss               |   123.189  |   361.484
+2020-07-22 23:51:30,306 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:30,307 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.016  |       N/A
+2020-07-22 23:51:30,311 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:51:30,314 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.399568
+2020-07-22 23:51:30,314 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:26
+2020-07-22 23:51:30,314 - INFO - allennlp.training.trainer - Epoch 44/49
+2020-07-22 23:51:30,314 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.016
+2020-07-22 23:51:30,330 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:30,332 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:34,321 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:34,709 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:34,710 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.982  |     0.954
+2020-07-22 23:51:34,710 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.984  |     0.956
+2020-07-22 23:51:34,710 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:34,710 - INFO - allennlp.training.tensorboard_writer - loss               |   117.234  |   362.074
+2020-07-22 23:51:34,711 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:34,711 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.016  |       N/A
+2020-07-22 23:51:34,716 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.402597
+2020-07-22 23:51:34,716 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:22
+2020-07-22 23:51:34,716 - INFO - allennlp.training.trainer - Epoch 45/49
+2020-07-22 23:51:34,716 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.016
+2020-07-22 23:51:34,731 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:34,731 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:38,736 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:39,135 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:39,136 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.983  |     0.954
+2020-07-22 23:51:39,136 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.985  |     0.955
+2020-07-22 23:51:39,136 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:39,137 - INFO - allennlp.training.tensorboard_writer - loss               |   111.807  |   361.064
+2020-07-22 23:51:39,137 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:39,137 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.016  |       N/A
+2020-07-22 23:51:39,142 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:51:39,145 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.428675
+2020-07-22 23:51:39,145 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:17
+2020-07-22 23:51:39,145 - INFO - allennlp.training.trainer - Epoch 46/49
+2020-07-22 23:51:39,145 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.016
+2020-07-22 23:51:39,161 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:39,163 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:43,198 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:43,618 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:43,618 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.983  |     0.954
+2020-07-22 23:51:43,619 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.985  |     0.956
+2020-07-22 23:51:43,619 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:43,619 - INFO - allennlp.training.tensorboard_writer - loss               |   106.367  |   360.947
+2020-07-22 23:51:43,620 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:43,620 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.016  |       N/A
+2020-07-22 23:51:43,624 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:51:43,627 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.481767
+2020-07-22 23:51:43,627 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:13
+2020-07-22 23:51:43,627 - INFO - allennlp.training.trainer - Epoch 47/49
+2020-07-22 23:51:43,627 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.016
+2020-07-22 23:51:43,642 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:43,643 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:47,659 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:48,082 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:48,082 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.984  |     0.954
+2020-07-22 23:51:48,083 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.985  |     0.955
+2020-07-22 23:51:48,083 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:48,083 - INFO - allennlp.training.tensorboard_writer - loss               |   101.970  |   361.252
+2020-07-22 23:51:48,083 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:48,083 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.016  |       N/A
+2020-07-22 23:51:48,089 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.461473
+2020-07-22 23:51:48,089 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:08
+2020-07-22 23:51:48,089 - INFO - allennlp.training.trainer - Epoch 48/49
+2020-07-22 23:51:48,089 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.016
+2020-07-22 23:51:48,104 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:48,104 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:52,096 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:52,485 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:52,486 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.984  |     0.954
+2020-07-22 23:51:52,486 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.985  |     0.956
+2020-07-22 23:51:52,486 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:52,486 - INFO - allennlp.training.tensorboard_writer - loss               |    96.924  |   359.543
+2020-07-22 23:51:52,487 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:52,487 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.016  |       N/A
+2020-07-22 23:51:52,491 - INFO - allennlp.training.checkpointer - Best validation performance so far. Copying weights to './model/neural_crf_ner/best.th'.
+2020-07-22 23:51:52,494 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.405284
+2020-07-22 23:51:52,494 - INFO - allennlp.training.trainer - Estimated training time remaining: 0:00:04
+2020-07-22 23:51:52,494 - INFO - allennlp.training.trainer - Epoch 49/49
+2020-07-22 23:51:52,494 - INFO - allennlp.training.trainer - Worker 0 memory usage MB: 660.016
+2020-07-22 23:51:52,509 - INFO - allennlp.training.trainer - GPU 0 memory usage MB: 2
+2020-07-22 23:51:52,509 - INFO - allennlp.training.trainer - Training
+2020-07-22 23:51:56,541 - INFO - allennlp.training.trainer - Validating
+2020-07-22 23:51:56,926 - INFO - allennlp.training.tensorboard_writer -                        Training |  Validation
+2020-07-22 23:51:56,927 - INFO - allennlp.training.tensorboard_writer - accuracy           |     0.985  |     0.954
+2020-07-22 23:51:56,927 - INFO - allennlp.training.tensorboard_writer - accuracy3          |     0.986  |     0.956
+2020-07-22 23:51:56,927 - INFO - allennlp.training.tensorboard_writer - gpu_0_memory_MB    |     2.000  |       N/A
+2020-07-22 23:51:56,927 - INFO - allennlp.training.tensorboard_writer - loss               |    93.237  |   360.370
+2020-07-22 23:51:56,928 - INFO - allennlp.training.tensorboard_writer - reg_loss           |     0.000  |     0.000
+2020-07-22 23:51:56,928 - INFO - allennlp.training.tensorboard_writer - worker_0_memory_MB |   660.016  |       N/A
+2020-07-22 23:51:56,933 - INFO - allennlp.training.trainer - Epoch duration: 0:00:04.438796
+2020-07-22 23:51:56,933 - INFO - allennlp.training.checkpointer - loading best weights
+2020-07-22 23:51:56,935 - INFO - allennlp.commands.train - The model will be evaluated using the best epoch weights.
+2020-07-22 23:51:56,935 - INFO - allennlp.training.util - Iterating over dataset
+2020-07-22 23:51:57,379 - INFO - allennlp.common.util - Metrics: {
+  "best_epoch": 48,
+  "peak_worker_0_memory_MB": 660.016,
+  "peak_gpu_0_memory_MB": 2,
+  "training_duration": "0:03:41.920533",
+  "training_start_epoch": 0,
+  "training_epochs": 49,
+  "epoch": 49,
+  "training_accuracy": 0.9845413947097218,
+  "training_accuracy3": 0.9856864765830757,
+  "training_loss": 93.23705125891644,
+  "training_reg_loss": 0.0,
+  "training_worker_0_memory_MB": 660.016,
+  "training_gpu_0_memory_MB": 2,
+  "validation_accuracy": 0.953887492415706,
+  "validation_accuracy3": 0.9556210453324088,
+  "validation_loss": 360.37043380737305,
+  "validation_reg_loss": 0.0,
+  "best_validation_accuracy": 0.953887492415706,
+  "best_validation_accuracy3": 0.9556210453324088,
+  "best_validation_loss": 359.54281997680664,
+  "best_validation_reg_loss": 0.0,
+  "test_accuracy": 0.953887492415706,
+  "test_accuracy3": 0.9556210453324088,
+  "test_loss": 359.54281997680664
+}
+2020-07-22 23:51:57,381 - INFO - allennlp.models.archival - archiving weights and vocabulary to ./model/neural_crf_ner/model.tar.gz

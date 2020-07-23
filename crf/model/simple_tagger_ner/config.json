@@ -1,0 +1,65 @@
+{
+    "dataset_reader": {
+        "type": "conll2003",
+        "tag_label": "ner",
+        "token_indexers": {
+            "token_characters": {
+                "type": "characters"
+            },
+            "tokens": {
+                "type": "single_id",
+                "lowercase_tokens": true
+            }
+        }
+    },
+    "model": {
+        "type": "simple_tagger",
+        "encoder": {
+            "type": "pass_through",
+            "input_dim": 100
+        },
+        "text_field_embedder": {
+            "token_embedders": {
+                "token_characters": {
+                    "type": "character_encoding",
+                    "dropout": 0.2,
+                    "embedding": {
+                        "embedding_dim": 5
+                    },
+                    "encoder": {
+                        "type": "cnn",
+                        "embedding_dim": 5,
+                        "ngram_filter_sizes": [
+                            5
+                        ],
+                        "num_filters": 50
+                    }
+                },
+                "tokens": {
+                    "type": "embedding",
+                    "embedding_dim": 50
+                }
+            }
+        }
+    },
+    "train_data_path": "./data/twitter_train.ner",
+    "validation_data_path": "./data/twitter_dev.ner",
+    "test_data_path": "./data/twitter_dev.ner",
+    "trainer": {
+        "cuda_device": -1,
+        "num_epochs": 40,
+        "optimizer": "adam",
+        "patience": 10
+    },
+    "data_loader": {
+        "batch_sampler": {
+            "type": "bucket",
+            "batch_size": 80,
+            "padding_noise": 0,
+            "sorting_keys": [
+                "tokens"
+            ]
+        }
+    },
+    "evaluate_on_test": true
+}
