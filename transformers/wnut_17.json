@@ -1,0 +1,15 @@
+{
+    "data_dir": "./data_wnut_17",
+    "labels": "./data_wnut_17/labels.txt",
+    "model_name_or_path": "bert-base-cased",
+    "output_dir": "wnut-17-model-1",
+    "max_seq_length": 128,
+    "num_train_epochs": 3,
+    "per_device_train_batch_size": 32,
+    "save_steps": 425,
+    "seed": 1,
+    "do_train": true,
+    "do_eval": true,
+    "do_predict": true,
+    "fp16": false
+}
